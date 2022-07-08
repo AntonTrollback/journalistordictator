@@ -1,0 +1,123 @@
+/**
+ * 1. Guard for horizontal scrolling
+ * 2. Prefered instead of global 'text' cursor
+ * 3. Prefered text rendering
+ * 4. Prefered svg text sizing
+ * 5. Disable Chrome on Android refreshing the page at scroll end
+ * 6. Enfoce smooth scrolling
+ */
+
+:root {
+  width: 100%; /* 1 */
+  height: 100%; /* 2 */
+  overflow-x: hidden; /* 1 */
+  cursor: default; /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased; /* 3 */
+  -moz-osx-font-smoothing: grayscale; /* 3 */
+  text-rendering: geometricPrecision; /* 4 */
+  scroll-behavior: auto; /* 5 */
+  font-size: var(--root-font-size);
+  font-weight: var(--doc-font-weight);
+  line-height: var(--doc-line-height);
+  letter-spacing: var(--doc-letter-spacing);
+}
+
+body {
+  font-family: var(--doc-font-family);
+  width: 100%;
+  height: auto;
+  overscroll-behavior: none; /* 6 */
+  overflow: hidden;
+  background: var(--current-color-background);
+  color: var(--current-color);
+}
+
+/**
+ * Reset specific user agent styles and add sensible defaults
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+iframe,
+figure {
+  margin: 0;
+  border: 0;
+  list-style: none;
+  padding: 0;
+}
+
+svg,
+img,
+video,
+iframe {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 700;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+/**
+ * Limit touch screen tap delays
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/**
+ * Provide emphasized focus styles for tab navigation
+ */
+
+:focus-visible {
+  outline: solid var(--focus-ring-width) !important;
+  outline-color: var(--focus-ring-color) !important;
+}
+
+@supports (:focus-visible) {
+  :focus:not(:focus-visible) {
+    outline: 0 !important;
+  }
+}
