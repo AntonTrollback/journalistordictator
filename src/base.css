@@ -18,23 +18,23 @@
   text-rendering: geometricPrecision; /* 4 */
   scroll-behavior: auto; /* 5 */
   font-size: var(--root-font-size);
-  font-weight: var(--doc-font-weight);
-  line-height: var(--doc-line-height);
-  letter-spacing: var(--doc-letter-spacing);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  background: var(--color-background);
+  color: var(--color);
 }
 
 body {
-  font-family: var(--doc-font-family);
   width: 100%;
   height: auto;
   overscroll-behavior: none; /* 6 */
   overflow: hidden;
-  background: var(--current-color-background);
-  color: var(--current-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
 /**
- * Reset specific user agent styles and add sensible defaults
+ * Sensible defaults
  */
 
 h1,
@@ -53,6 +53,7 @@ figure {
   border: 0;
   list-style: none;
   padding: 0;
+  font-size: inherit;
 }
 
 svg,
@@ -91,7 +92,7 @@ button {
 }
 
 /**
- * Limit touch screen tap delays
+ * Shorten touch tap delays
  */
 
 a,
@@ -108,7 +109,7 @@ textarea,
 }
 
 /**
- * Provide emphasized focus styles for tab navigation
+ * Limit focus styles to keyboard navigation
  */
 
 :focus-visible {
@@ -116,7 +117,7 @@ textarea,
   outline-color: var(--focus-ring-color) !important;
 }
 
-@supports (:focus-visible) {
+@supports (: focus-visible) {
   :focus:not(:focus-visible) {
     outline: 0 !important;
   }

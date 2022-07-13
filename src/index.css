@@ -1,4 +1,5 @@
 @import 'modern-normalize';
 @import './config.css';
 @import './base.css';
+@import './utils.css';
 @import './interface.css';

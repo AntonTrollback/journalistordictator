@@ -5,28 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Journalist or Dictator</title>
-    <meta name="description" content="Desc...">
-    <meta property="og:image" content="https://journalistordictator.com/share.png">
-    <meta property="og:image:width" content="2400">
-    <meta property="og:image:height" content="1260">
-    <meta property="og:image:alt" content="Desc...">
-    <meta property="og:description" content="Desc...">
-    <meta property="og:title" content="Journalist or Dictator">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Aligned VC">
-    <meta property="og:url" content="https://journalistordictator.com/">
-    <meta name="twitter:image:src" content="https://journalistordictator.com/share.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Journalist or Dictator">
-    <meta name="twitter:description" content="Desc...">
+    <meta name="description" content="Desc..." />
+    <meta
+      property="og:image"
+      content="https://journalistordictator.com/share.png"
+    />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta property="og:image:alt" content="Desc..." />
+    <meta property="og:description" content="Desc..." />
+    <meta property="og:title" content="Journalist or Dictator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aligned VC" />
+    <meta property="og:url" content="https://journalistordictator.com/" />
+    <meta
+      name="twitter:image:src"
+      content="https://journalistordictator.com/share.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Journalist or Dictator" />
+    <meta name="twitter:description" content="Desc..." />
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-disable.ico" sizes="any" />
+    <link rel="icon" href="/icon-disable.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/src/index.css" />
+    <script src="/src/index.js" defer=""></script>
   </head>
-  <body>
+  <body class="u-container">
+    <main>
+      <h1 class="u-hiddenVisually">Dictator or Journalist</h1>
+      <p class="u-text intro">
+        Take this quiz and check which news come from journalistic research and
+        what comes from Kremlin.
+        <a class="u-link" href="#about">Why is this important?</a>
+      </p>
+      <a
+        class="social u-link"
+        href="https://instagram.com/journalistordictator"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg role="presentation" viewBox="0 0 30.62 30.62">
+          <path d="m0 0h30.62v30.62h-30.62z" fill="var(--color)" />
+          <g
+            fill="none"
+            stroke="var(--color-background)"
+            stroke-miterlimit="10"
+          >
+            <circle cx="15.23" cy="15.9" r="9.33" />
+            <ellipse cx="25.6" cy="6.38" rx="1.96" ry="2.03" />
+          </g>
+        </svg>
+        <span class="u-hiddenVisually">Journalist or Dictator on </span
+        >Instagram
+      </a>
 
-    <h1>Test</h1>
+      <section class="screen" data-theme="black" id="about">
+        <div class="u-divider"></div>
+        <h2 class="u-title">Why is this important?</h2>
+        <p class="u-text">
+          Because war isn't just blood, death and rape. It's also about how we
+          talk about it: the war of information.
+        </p>
+        <h3 class="u-title">Our manifesto</h3>
+        <ul class="list">
+          <li>Verify, don't amplify.</li>
+          <li>If you're not on the ground, dont report as if you where.</li>
+          <li>
+            If a state's PR strategy is deception, don't treat their texts as
+            information.
+          </li>
+          <li>
+            Raped infants don't have a voice. Don't give their perpetrator one.
+          </li>
+          <li>It's always better to be a useless idiot than a usefull one.</li>
+        </ul>
+      </section>
 
+      <h2 class="u-hiddenVisually">
+        Play the game: Who claimed it? Dictator or Journalist?
+      </h2>
+      <div class="screen active" id="question-1">
+        <div class="message">
+          <h3 class="u-display" style="max-width: 20em">
+            "Kehrson Region in Ukraine starts grain exports to Russia"
+          </h3>
+        </div>
+        <div class="actions">
+          <p class="u-title label">Who claimed it?</p>
+          <button class="u-action" data-target="#result-1">Journalist</button>
+          <span class="u-title"> or </span>
+          <button class="u-action" data-target="#result-1">Dictator</button>
+        </div>
+      </div>
+      <div class="screen" data-theme="red" id="result-1">
+        <div class="message">
+          <p class="u-display" style="max-width: 10em">
+            You're wrong. They both did.
+          </p>
+          <div class="list">
+            <p class="u-text">Först skrev Ryssland detta</p>
+            <div class="u-divider"></div>
+            <p class="u-text">Sen skrev journalisterna detta</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="u-action" data-target="#question-2">Next</button>
+        </div>
+      </div>
+
+      <div class="screen" data-theme="black" id="question-2">
+        <div class="message">
+          <h3 class="u-display" style="max-width: 15em">
+            "Title here, quoting a news article"
+          </h3>
+        </div>
+        <div class="actions">
+          <p class="u-title label">Who claimed it?</p>
+          <button class="u-action" data-target="#result-2">Journalist</button>
+          <span class="u-title"> or </span>
+          <button class="u-action" data-target="#result-2">Dictator</button>
+        </div>
+      </div>
+      <div class="screen" data-theme="red" id="result-2">
+        <div class="message">
+          <p class="u-display" style="max-width: 10em">
+            Nope! They both said it.
+          </p>
+          <div class="list">
+            <p class="u-text">Först skrev Ryssland detta</p>
+            <div class="u-divider"></div>
+            <p class="u-text">Sen skrev journalisterna detta</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="u-action" data-target="#question-3">Next</button>
+        </div>
+      </div>
+
+      <div class="screen" data-theme="black" id="question-3">
+        <div class="message">
+          <h3 class="u-display" style="max-width: 20em">
+            "This is a longer title with a bit more to say about the state of
+            the war. In other news, hello."
+          </h3>
+        </div>
+        <div class="actions">
+          <p class="u-title label">Who claimed it?</p>
+          <button class="u-action" data-target="#result-3">Journalist</button>
+          <span class="u-title"> or </span>
+          <button class="u-action" data-target="#result-3">Dictator</button>
+        </div>
+      </div>
+      <div class="screen" data-theme="red" id="result-3">
+        <div class="message">
+          <p class="u-display" style="max-width: 10em">
+            Guess what, both said it!
+          </p>
+          <div class="list">
+            <p class="u-text">Först skrev Ryssland detta</p>
+            <div class="u-divider"></div>
+            <p class="u-text">Sen skrev journalisterna detta</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="u-action" data-target="#final">Get your score</button>
+        </div>
+      </div>
+
+      <section class="screen" data-theme="black" id="final">
+        <div class="message">
+          <h2 class="u-display">You lost</h2>
+        </div>
+        <div class="u-divider u-mt0"></div>
+        <p class="u-title">
+          But your'e in good company, because when Kremls message is amplified
+          rather than verified by journalists, everyone loses.
+        </p>
+        <p class="u-text">
+          If you're a journalist and haven't done your research, it might be
+          better to not report. In the end, it's always better to be a useless
+          idiot than a useful one.
+        </p>
+        <div class="u-divider u-mb0"></div>
+        <div class="actions">
+          <a
+            class="u-action"
+            href="https://instagram.com/journalistordictator"
+            target="_blank"
+            rel="noopener noreferrer"
+            >More useless idiocy on Instagram</a
+          >
+        </div>
+      </section>
+    </main>
   </body>
 </html>
