@@ -15,7 +15,7 @@ export default defineConfig({
       minifyCSS: true
     }),
     viteSingleFile({ useRecommendedBuildConfig: false })
-  ],
+  ]
 })
 
 function minifyPlugin(opts) {

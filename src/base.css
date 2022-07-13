@@ -117,8 +117,6 @@ textarea,
   outline-color: var(--focus-ring-color) !important;
 }
 
-@supports (: focus-visible) {
-  :focus:not(:focus-visible) {
-    outline: 0 !important;
-  }
+:focus:not(:focus-visible) {
+  outline: 0 !important;
 }
